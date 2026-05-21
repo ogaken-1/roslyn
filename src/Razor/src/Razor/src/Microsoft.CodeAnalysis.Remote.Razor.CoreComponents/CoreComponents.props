@@ -21,7 +21,7 @@
 
     <VSSDKTargetPlatformRegRootSuffix>$(RazorVSSDKTargetPlatformRegRootSuffix)</VSSDKTargetPlatformRegRootSuffix>
     <ExtensionInstallationRoot Condition="'$(RazorExtensionInstallationRoot)' != ''">$(RazorExtensionInstallationRoot)</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>$(RazorExtensionInstallationFolderBase)\$(RazorServiceHubCoreSubFolder)</ExtensionInstallationFolder>
+    <ExtensionInstallationFolder Condition="'$(RazorExtensionInstallationRoot)' != ''">$(RazorExtensionInstallationFolderBase)\$(RazorServiceHubCoreSubFolder)</ExtensionInstallationFolder>
     <VisualStudioInsertionComponent Condition="'$(RazorVisualStudioInsertionComponent)' != ''">$(RazorVisualStudioInsertionComponent)</VisualStudioInsertionComponent>
 
     <!-- Create the VSIX for official builds and local x64 deployment so ServiceHub payload stays in the wrapper project. -->

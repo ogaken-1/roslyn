@@ -9,7 +9,7 @@
 
     <!-- Required to place the vsix in the right location by WTE MSI -->
     <ExtensionInstallationRoot Condition="'$(RazorExtensionInstallationRoot)' != ''">$(RazorExtensionInstallationRoot)</ExtensionInstallationRoot>
-    <ExtensionInstallationFolder>$(RazorExtensionInstallationFolderBase)</ExtensionInstallationFolder>
+    <ExtensionInstallationFolder Condition="'$(RazorExtensionInstallationRoot)' != ''">$(RazorExtensionInstallationFolderBase)</ExtensionInstallationFolder>
     <IsProductComponent>$(RazorIsProductComponent)</IsProductComponent>
     <VisualStudioInsertionComponent Condition="'$(RazorVisualStudioInsertionComponent)' != ''">$(RazorVisualStudioInsertionComponent)</VisualStudioInsertionComponent>
 
